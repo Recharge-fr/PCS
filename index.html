@@ -1113,7 +1113,7 @@ Consultez <a href="" class="bb-uri">les questions les plus fr&eacute;quemment po
     </div>
     
     
-    <script type="text/javascript" src="https://static.rapido.com/media/frontend/javascripts/beltegoed/bundle.js?v=1706863405
+   <script type="text/javascript" src="https://static.rapido.com/media/frontend/javascripts/beltegoed/bundle.js?v=1706863405
 "></script>
 <script type="text/javascript">
     //<![CDATA[
@@ -1176,12 +1176,43 @@ Consultez <a href="" class="bb-uri">les questions les plus fr&eacute;quemment po
     });
     //]]>
 </script>
-
+<script type="text/javascript">
+    //<![CDATA[
+        (function() {
+    function riskifiedBeaconLoad() {
+    var store_domain = 'https://www.recharge.fr';
+    var session_id = 'c7d37foomdpud0fnderr60s9s1';
+    var url = ('https:' == document.location.protocol ? 'https://' : 'http://')
+    + "beacon.riskified.com?shop=" + store_domain + "&sid=" + session_id;
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent)
+    window.attachEvent('onload', riskifiedBeaconLoad)
+    else
+    window.addEventListener('load', riskifiedBeaconLoad, false);
+    })();
+        //]]>
+</script>
 
     
 
                     
-         <script>
+<script>
+    dataLayer.push({
+        'event': 'page',
+        'website_id': '001',
+        'customer_country': "GA",
+        'product_country': "FR",
+        'product_category': "carte-de-paiement-prepayee",
+        'product_brand': "carte-pcs",
+        'page_type': 'brand',
+    });
+</script>            <script>
 
         
         
