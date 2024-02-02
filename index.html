@@ -23,7 +23,7 @@
     <meta property="bc:pop:image_banner_desktop" content="https://static.rapido.com/cms/sites/24/2021/01/04175817/cartepcs_ProductBanner_RFR.png" />
 <meta property="bc:pop:image_banner_mobile" content="https://static.rapido.com/media/topup/recharge/default/images/headers/pcs.jpg?v=1706863405
 " />
-            <meta property="og:updated_time" content="2024-02-02T06:49:10+01:00" />
+            
         <meta property="bc:brand" content="PCS" />
                     <meta property="bc:category" content="prepaid_credit_card" />
             
@@ -1181,33 +1181,12 @@ Consultez <a href="" class="bb-uri">les questions les plus fr&eacute;quemment po
         
         
         // eCommerce Datalayer
-        dataLayer.push({
-            'event': 'impressions',
-            'ecommerce': {
-                'impressions':
-                    [{"name":"Carte PCS 20 \u20ac","id":"74552","price":"20.00","brand":"Carte PCS","category":"Prepaid Creditcard\/Carte PCS","position":1},{"name":"Carte PCS 50 \u20ac","id":"74553","price":"50.00","brand":"Carte PCS","category":"Prepaid Creditcard\/Carte PCS","position":2},{"name":"Carte PCS 100 \u20ac","id":"74554","price":"100.00","brand":"Carte PCS","category":"Prepaid Creditcard\/Carte PCS","position":3},{"name":"Carte PCS 150 \u20ac","id":"74555","price":"150.00","brand":"Carte PCS","category":"Prepaid Creditcard\/Carte PCS","position":4}]            }
-        });
-
+     
         $('body').on('submit', '.productForm', function(e) {
             var product = $(this).closest('.product');
             var productIndex = (product.parent().index() + 1);
 
-            dataLayer.push({
-                'event': 'addToCart',
-                'ecommerce': {
-                    'add': {
-                        'products': [{
-                            'name': product.find('meta[itemprop="name"]').attr('content'),
-                            'id': product.find('.product-ean-code').attr('dataLayerContent'),
-                            'price': product.find('meta[itemprop="price"]').attr('content'),
-                            'brand': product.find('meta[itemprop="brand"]').attr('content'),
-                            'category': product.find('meta[itemprop="category"]').attr('content'),
-                            'quantity': product.find('.selectAmount').val()
-                        }]
-                    }
-                }
-            });
-        });
+        }
 
 
     </script>
