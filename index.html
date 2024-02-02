@@ -1132,16 +1132,7 @@ Consultez <a href="" class="bb-uri">les questions les plus fr&eacute;quemment po
             $('#itunes-popup').remove();
         });
 
-        $('.order-button[data-product]').click(function(e) {
-            $.get('/shop/product/popup', {
-                    product: $(this).attr('data-product')
-                }, function(data) {
-                    $('body').append(data);
-
-                }
-            );
-            return false;
-        });
+        
     });
     //]]>
 </script>
